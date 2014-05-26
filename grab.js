@@ -27,7 +27,7 @@ else{
             if (arrows[m].innerText.indexOf("Termin") == -1) {
                 continue;
             }
-            if(window.localStorage.getItem("appoint_page_opend") != "yes"){
+            if(window.localStorage.getItem("appoint_page_opend") == "no"){
                 window.open(arrows[m].href, "_blank");
                 window.close();
                 break;
@@ -43,13 +43,14 @@ else{
         });
         
     }
-    if(btn_submit1 != null && window.localStorage.getItem("appoint_page_opend") != "yes") {
-        
-        if(window.localStorage.getItem("appoint_page_opend") == "yes"){
+    if(btn_submit1 != null && window.localStorage.getItem("appoint_page_opend") == "no") {
+        var refresh_capt2 = document.getElementById("appointment_refreshCaptcha_captchaText");
+        var isopened = window.localStorage.getItem("appoint_page_opend");
+        if(isopened == "yes" && refresh_capt2 == null){
             window.close();
             return;
         }
-        else{
+        else if(isopened == "no"){
             window.localStorage.setItem("appoint_page_opend", "yes");
             
             chrome.storage.local.get("appointment_showForm_lastname", function(applicant){
@@ -104,7 +105,7 @@ else{
                         if(btn_submit2 == null)
                             btn_submit2 = document.getElementById("appointment_refreshCaptcha_appointment_addAppointment");
                         btn_submit2.click();
-                        window.localStorage.removeItem("appoint_page_opend");
+                        window.localStorage.setItem("appoint_page_opend", "no");
                     }
                 });
             }
