@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "Grab Avaliable Peki",
+    "version": "3.0",
+    "description": "Auto fill to grab.",
+    "permissions": [
+        "http://*/",
+        "https://*/",
+        "bookmarks",
+        "tabs",
+        "history",
+        "storage"
+    ],
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://service2.diplo.de/rktermin/extern/*"
+            ],
+            "js": ["grab.js"]
+        }
+    ]
+}
