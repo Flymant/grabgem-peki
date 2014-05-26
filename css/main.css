@@ -1,0 +1,35 @@
+body {
+    padding: 0 18%;
+    cursor: default;
+    background-color: #fafbff;
+    font: menu;
+    font-size: 10pt
+}
+
+#header {
+    font-size: 18pt;
+    text-shadow: #ccc 1px 1px 3px;
+    border: solid 1px #abc;
+    border-radius: 6px;
+    padding: 3px;
+    margin-bottom: 10px;
+    background-color: #eaeeff;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(0.48, hsl(217, 73%, 97%)), color-stop(0.51, hsl(217, 62%, 95%)));
+    -webkit-box-shadow: 0 1px 2px #ddd;
+    margin-top: 20px;
+}
+
+#header span img {
+    padding: 10px;
+}
+
+
+.body {
+    height: 100%;
+    padding: 13px;
+    border: solid 1px #abc;
+    margin-bottom: 20px;
+    border-radius: 0 0 6px 6px;
+    background-color: hsl(216, 56%, 98%);
+    -webkit-box-shadow: 0 0 2px #eee;
+}
