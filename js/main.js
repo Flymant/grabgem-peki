@@ -1,7 +1,10 @@
 var applicant = {
     "appointment_showForm_lastname": null,
     "appointment_showForm_firstname": null,
-    "appointment_showForm_fields_0__content": null
+    "appointment_showForm_fields_0__content": null,
+    "appointment_showForm_fields_3__content": null,
+    "appointment_showForm_fields_5__content": null,
+    "appointment_showForm_fields_7__content": null
 };
 
 var settings = {

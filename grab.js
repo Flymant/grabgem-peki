@@ -83,10 +83,13 @@ else{
                 chrome.storage.local.get("appointment_showForm_email", function(applicant){
                     var input_email = document.getElementById("appointment_showForm_email");
                     var input_email2 = document.getElementById("appointment_showForm_emailrepeat");
+                    var input_email3 = document.getElementById("appointment_showForm_fields_6__content");
                     if(input_email != null)
                         input_email.value = applicant.appointment_showForm_email;
                     if(input_email2 != null)
                         input_email2.value = applicant.appointment_showForm_email;
+                    if(input_email3 != null)
+                        input_email3.value = applicant.appointment_showForm_email;
                 });
                 
                 
@@ -95,11 +98,29 @@ else{
                     if(input_pass != null)
                         input_pass.value = applicant.appointment_showForm_fields_0__content;
                 });
+
+                chrome.storage.local.get("appointment_showForm_fields_3__content", function(applicant){
+                    var input_telephone = document.getElementById("appointment_showForm_fields_3__content");
+                    if(input_telephone != null)
+                        input_telephone.value = applicant.appointment_showForm_fields_3__content;
+                });
                 
+                chrome.storage.local.get("appointment_showForm_fields_5__content", function(applicant){
+                    var input_birth = document.getElementById("appointment_showForm_fields_5__content");
+                    if(input_birth != null)
+                        input_birth.value = applicant.appointment_showForm_fields_5__content;
+                });
                 
-                var ckb_agree = document.getElementById("appointment_showForm_fields_3__content");
+                chrome.storage.local.get("appointment_showForm_fields_7__content", function(applicant){
+                    var input_restname = document.getElementById("appointment_showForm_fields_7__content");
+                    if(input_restname != null)
+                        input_restname.value = applicant.appointment_showForm_fields_7__content;
+                });
+            
+                var ckb_agree = document.getElementById("appointment_showForm_fields_8__content");
                 if(ckb_agree != null)
                     ckb_agree.click();
+
                 
                 var capt2 = document.getElementById("appointment_showForm_captchaText");
                 if(capt2 == null){
